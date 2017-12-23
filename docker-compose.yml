@@ -1,0 +1,13 @@
+version: '2'
+services:
+  app:
+    build:
+        context: .
+        dockerfile: app.dockerfile
+    container_name: vision-web-api
+    volumes:
+      - ./:/app
+    ports:
+      - "3005:3005"
+    environment:
+      PORT: 3005  
